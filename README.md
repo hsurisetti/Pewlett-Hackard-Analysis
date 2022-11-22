@@ -6,9 +6,9 @@ Pewlet Hackard is a large company boasting several thousand employees. Many empl
 
 ## Resources :
 
-Data Sources: departments.csv,dept_emp.csv,dept_manager.csv,employees.csv,salaries.csv.titles.csv
+Data Sources: departments.csv, dept_emp.csv, dept_manager.csv, employees.csv, salaries.csv, titles.csv
 
-Software : SQL, POSTgreSQL,pgAdmin
+Software : SQL, POSTgreSQL, pgAdmin
 
 ### ERD Diagram:
 ![img](https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/PH_ERD.png)
@@ -32,7 +32,7 @@ order by e.emp_no
 ```
 
 
-### Pewlett Hackard - retirement_titles Table
+### Pewlett Hackard - retirement_titles Table 
 ![img](https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/retirement_title.png)
 
 
@@ -105,11 +105,12 @@ How many roles will need to be filled as the "silver tsunami" begins to make an 
 Also, we can see from the unique_titles table that, there are large number of engineers(45,397 engineers )retiring which 50.2% of all the retirees , which poses a big risk.
 To make the problem , more difficult we can see that a large sector od senior staff(28,254) are also retiring which accounts to 31.3% of the total.
 
-Image 7: Pewlett Hackard - unique_titles.csv
+![img](https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/unique_titles.png)
+
 
 Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
-Image 8 : mentorship_eligibility.csv - grouped by title
+Image  : mentorship_eligibility - grouped by title
  As Silver Tsunami approaches , PH would face a major threat with a large number of senior employees retiring.  
     The total number of retiring employees chosen for mentorship are 1549 of the 72,458 employees actually retiring. This leaves a ratio of 47:1, which is a large ratio.
          72,458/ 1549 = 47 people / mentor 
