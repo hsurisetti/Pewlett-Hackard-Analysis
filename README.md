@@ -83,7 +83,7 @@ ORDER BY e.emp_no ;
 ## mentorship_eligibility Table
 <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/mentorship_eligibility.png" width=620/>
 
-Based on the mentorship_eligibility table , can also obtain the number of potential mentors based of title
+Based on the mentorship_eligibility table , can also obtain the number of potential mentors based of title, which also shows which sectors have mentors available the most and which has the least , which will help the mangement to make or change any of their decisions.
 
 ```javascript
 SELECT COUNT(emp_no), title
@@ -91,6 +91,8 @@ FROM mentorship_eligibility
 GROUP BY title
 ORDER BY COUNT(emp_no) DESC;
 ```
+
+<img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/mentors_by_title.png" width=320/>
 
 
 ## Results : 
@@ -111,24 +113,22 @@ ORDER BY COUNT(emp_no) DESC;
 
 
 ## Summary :
- Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
 
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
     As Silver Tsunami begins, 90,398 employees retire which creates opening for that many which would be a 30 % of the total number of employees count.
 
     Total Count of employees who are still employed in PH : 240,124
     Number of retiring employees, still employed in PH :  72,458
 
     Percentage of employees about to retire who are still employed in PH : 72,458 / 240,124 = 30.1%
-Also, we can see from the unique_titles table that, there are large number of engineers(45,397 engineers )retiring which 50.2% of all the retirees , which poses a big risk.
+Also, we can see from the unique_titles table that, there are large number of engineers (45,397 engineers) retiring which 50.2% of all the retirees , which poses a big risk.
+
 To make the problem , more difficult we can see that a large sector od senior staff(28,254) are also retiring which accounts to 31.3% of the total.
 
  <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/unique_titles.png" width=620/>
 
 
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-
-Image  : mentorship_eligibility - grouped by title
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
  As Silver Tsunami approaches , PH would face a major threat with a large number of senior employees retiring.  
     The total number of retiring employees chosen for mentorship are 1549 of the 72,458 employees actually retiring. This leaves a ratio of 47:1, which is a large ratio.
