@@ -14,7 +14,7 @@ Software : SQL, POSTgreSQL, pgAdmin
  <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/PH_ERD.png" width=620/>
 
 ### Retiring Employees by Title
- Our first step would be to find the number of employees about to retire by fetching the details from employee table and joining with titles to get the associated ttitles of the employees born between Jan-01-1952 and Dec-31-1955.The query returns a total of 133776 rows.
+ Our first step would be to find the number of employees about to retire by fetching the details from employee table and joining with titles table to get the associated titles of the employees born between Jan-01-1952 and Dec-31-1955.The query returns a total of 133776 rows.
 
 ### Query : 
 
@@ -54,10 +54,10 @@ ORDER BY "title_count" DESC
 
 <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/retiring_titles.png" width=420/>
 
-  The above table shows the count of retiring people by title. This table or csv file , would tell us which sectors are mostly affected and how much percentage and also shows how many senior employees are retiring.
+  The above table shows the count of retiring people by title. This table or csv file , would tell us which sectors are mostly affected and  we can assess the percentage based of it. It shows that a major number of  senior employees are retiring.
 
 ## Employees eligible for mentorship Program
-  Next, we generate the query to get all the retiring employees who meet the mentorship eligibility criteria i.e., whose birth date falls between Jan-01-1965 and Dec-12-1965 and store the results in mentorship_eligibility table and export them into csv file.
+  Next, we generate the query to get all the retiring employees, who meet the mentorship eligibility criteria i.e., whose birth date falls between Jan-01-1965 and Dec-12-1965 and store the results in mentorship_eligibility table and export them into csv file.
 ### Query
  ```javascript
 SELECT DISTINCT ON (e.emp_no
@@ -115,7 +115,7 @@ ORDER BY COUNT(emp_no) DESC;
 ## Summary :
 
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-    As Silver Tsunami begins, 90,398 employees retire which creates opening for that many which would be a 30 % of the total number of employees count.
+    As Silver Tsunami begins, 90,398 employees retire which creates opening for that many which would be a 30.1 % of the total number of employees count.
 
     Total Count of employees who are still employed in PH : 240,124
     Number of retiring employees, still employed in PH :  72,458
