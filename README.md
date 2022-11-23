@@ -83,15 +83,7 @@ ORDER BY e.emp_no ;
 ## mentorship_eligibility Table
 <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/mentorship_eligibility.png" width=620/>
 
-Based on the mentorship_eligibility table , can also obtain the number of potential mentors based of title, which also shows which sectors have mentors available the most and which has the least , which will help the mangement to make or change any of their decisions.
-
-```javascript
-SELECT COUNT(emp_no), title
-FROM mentorship_eligibility
-GROUP BY title
-ORDER BY COUNT(emp_no) DESC;
-```
-
+The table gives a detailed description of the retiring employees . Below table shows the associated titles count of the eligible mentors.
 <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/mentors_by_title.png" width=320/>
 
 
@@ -125,10 +117,22 @@ Also, we can see from the unique_titles table that, there are large number of en
 
 To make the problem , more difficult we can see that a large sector od senior staff(28,254) are also retiring which accounts to 31.3% of the total.
 
- <img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/unique_titles.png" width=620/>
+Below, is the table showing the retiring titles count.
+
+<img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/retiring_titles.png" width=420/>
 
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+  Based on the mentorship_eligibility table , can also obtain the number of potential mentors based of title, which also shows which sectors have mentors available the most and which has the least , which will help the mangement to make or change any of their decisions. 
+
+```javascript
+SELECT COUNT(emp_no), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY COUNT(emp_no) DESC;
+```
+
+<img src="https://github.com/hsurisetti/Pewlett-Hackard-Analysis/blob/main/screenshots/mentors_by_title.png" width=320/>
 
  As Silver Tsunami approaches , PH would face a major threat with a large number of senior employees retiring.  
     The total number of retiring employees chosen for mentorship are 1549 of the 72,458 employees actually retiring. This leaves a ratio of 47:1, which is a large ratio.
